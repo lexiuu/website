@@ -1,23 +1,196 @@
-<h1>📜 Zasady panujace na live</h1>
-
-<h1>📜 Zasady panujace na live</h1>
-
-<h3 class="podpunkty">1.Na czacie przestrzegamy podstawowej kultury oraz szacunku do wszystkich uzytkowników czatu.<br>2.Na czacie można sporadycznie przeklnąć (jeżeli sytuacja tego wymaga) lecz nadużywanie wulgarnego słownictwa będzie usuwane oraz będą z tego wyciągane konsekwencje.<br>3.Jeżeli potrzebujesz pomocy, pytanie zawsze kieruj do Moderatorów.<br>4.Prosimy o umiarkowane używanie emotek aby nie zaśmiecać czatu.<br>5.Prosimy o nie powtarzanie tych samych wiadomości co chwile oraz prosimy nie 'Spamować'<br>6.Czat to nie rynek więc prosimy nie proponować żadnych ofert kupna,wymiany lub sprzedaży czegokolwiek.<br>7. Na czacie piszemy tylko w języku Polskim.<br>8. Wszelki trolling innych użytkowników będzie kasowany.<br>Życzymy miłego oglądania oraz spędzania czasu podczas transmisji na żywo.</h3>
-
-<style> 
-  @import url('https://fonts.googleapis.com/css?family=Manjari:700&display=swap');
-
-h1 {
-  position: absolute;
-  font-family: 'Manjari', sans-serif;
-  left: 80px;
-  top: 60px;
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Lexiu | Strona Główna</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="startTime()">
+        <script>
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                m = checkTime(m);
+                document.getElementById('txt').innerHTML = 
+                h + ":" + m;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};
+                return i;
+            }
+        </script>
+        <div class="time">
+            <div id="txt"></div>
+        </div>
+        <header>
+            <img class="logo" src="https://i.ibb.co/jrNyXhf/logo.png" width="53" height="86">
+            <button class="beta">
+                wersja beta
+            </button>
+            <h2 class="welcome">
+                Cześć!
+            </h2>
+            <h4 class="welcometext">
+                Słyszałem, że nie oglądałeś
+                <br>
+                mojego najnowszego filmu?
+            </h4>
+            <a href="https://youtu.be/Ge_zeYhuPuk?list=PLTd_sZorKUCKHUxsyJ0uYNbdGtW_Qwq-X">
+                <button class="youtubemovie">
+                    kliknij, aby obejrzeć
+                </button>
+            </a>
+            <h4 class="copyright">
+                Lexiu 2019 | © Wszelkie Prawa Zastrzeżone.
+            </h4>
+          
+          <style>
+            @font-face {
+    font-family: 'Gilroy-Bold ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Bold ☞'), url('Gilroy-Bold.woff') format('woff');
 }
 
-.podpunkty {
-  position: absolute;
-  font-family: 'Manjari', sans-serif;
-  left: 80px;
-  top: 140px;
+@font-face {
+    font-family: 'Gilroy-Heavy ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Heavy ☞'), url('Gilroy-Heavy.woff') format('woff');
 }
-</style>
+
+html {
+    margin: 0;
+}
+
+.logo {
+    position: absolute;
+    width: 53px;
+    height: 86px;
+    left: 91px;
+    top: 63px;
+}
+
+.beta {
+    position: absolute;
+    width: 146px;
+    height: 39px;
+    left: 175px;
+    top: 87px;
+    background-color: #0094FF;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-family: Gilroy-Bold ☞;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    animation: betascale 2.1s infinite;
+}
+
+@keyframes betascale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.090);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.time {
+    position: absolute;
+    left: 350px;
+    top: 91px;
+    font-family: Gilroy-Bold ☞;
+    font-weight: normal;
+    font-size: 26px;
+    color: #0094FF;
+}
+
+.welcome {
+    position: absolute;
+    left: 161px;
+    top: 240px;
+    font-family: Gilroy-Bold ☞;
+    font-weight: normal;
+    font-size: 80px;
+    color: #0094FF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.welcometext {
+    position: absolute;
+    left: 127px;
+    top: 371px;
+    font-family: Gilroy-Bold ☞;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 101.8%;
+    text-align: center;
+    color: #0094FF;
+}
+
+.youtubemovie {
+    position: absolute;
+    width: 270px;
+    height: 54px;
+    left: 151px;
+    top: 469px;
+    background-color: #0094FF;
+    border-radius: 35px;
+    border: none;
+    color: white;
+    font-family: Gilroy-Bold ☞;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 101.8%;
+    transition: 0.18s;
+}
+
+.youtubemovie:active {
+    transform: scale(0.9);
+    transition: 0.18s;
+}
+
+.copyright { 
+    position: absolute;
+    left: 117px;
+    top: 649px;
+    font-family: Gilroy-Bold ☞;
+    font-weight: normal;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* mobiles */
+@media (max-width: 767.98px) {
+    .logo {
+        left: 81px;
+    }
+    .beta {
+        left: 160px;
+    }
+    .time {
+        left: 330px;
+    }
+    .welcome {
+        left: 121px;
+    }
+    .welcometext {
+        left: 87px;
+    }
+    .youtubemovie {
+        left: 121px;
+    }
+}
+          </style>
+          </body>
+      </html>
